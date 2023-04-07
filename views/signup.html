@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = 'stylesheet' href = '/css/signup_loginStyles.css'>
+    <title>Sign up</title>
+</head>
+<body style = 'background-color : #333333;'>
+    <a style = 'margin-top : 10px;text-align: center;text-decoration : none;'href = '/'><h1 style = 'font-family : "Candara";color : white; font-size: 35px;'>ComRate</h1></a>
+    <div class = 'button-box'>
+        <div id = 'signup_selected'></div>
+        <a href = '/user/signup'><button>Sign up</button></a>
+        <a href = '/user/login'><button>Login</button></a>
+    </div>
+    
+    <form class = 'box' action = '/user/signup' method="POST">
+        <input type = 'text' name = 'username' placeholder="Username" required>
+        <input type = 'password' name = 'password' placeholder="Password" required>
+        <input type = 'text' name = 'first_name' placeholder="First name" required>
+        <input type = 'text' name = 'last_name' placeholder="Last name" required>
+        <label style = 'color  : white'>Male
+            <input value = 'Male' name = 'gender' type = 'radio' required>
+        </label>
+        <label style = 'color : white'>Female
+            <input value = 'Female' name = 'gender' type = 'radio' required>
+        </label>
+        <input type = 'text' name = 'address' placeholder="Address" required>
+        <input type = 'number' name = 'mobile_number' placeholder="Mobile number" required>
+        <input type = 'email' name = 'email_address' placeholder="Email address" required>
+        <button type = 'submit'>Sign up</button>
+    </form>
+</body>
+</html>

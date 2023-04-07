@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = 'stylesheet' href = '/css/indexStyles.css'>
+    <title>About us</title>
+</head>
+<body>
+    <nav>
+        <a style = 'margin-right : auto;text-decoration : none;'href = '/'><h1 style = 'font-family : "Candara";color : white;;margin : 20px; font-size: 35px;'>ComRate</h1></a>
+        <ul>
+            <li><a href = '/'>Home</a></li>
+            <li><a href = '/aboutus'>About us</a></li>
+            <li><a href = '/contactus'>Contact us</a></li>
+        </ul>
+        <button onclick = 'sign_login()'>Sign up/Login</button>
+    </nav>
+
+    <h1 style = 'color : white; margin : 30px'>About us</h1>
+    <div style = 'margin : 30px;height : 200px;padding : 10px;background-color: white;'>
+        <p>This is a pretty bad restaurant review website, please leave right now once you saw this. Thank you for your cooperation</p>
+    </div>
+</body>
+<script>
+    function sign_login() {
+        location.href = '/user/signup';
+    }
+</script>
+</html>

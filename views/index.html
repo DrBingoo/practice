@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = 'stylesheet' href = '/css/indexStyles.css'>
+    <script src="https://kit.fontawesome.com/6645d46044.js" crossorigin="anonymous"></script>
+    <script defer src = '/js/index.js'></script>
+    <title>ComRate</title>
+</head>
+<body onload = 'getRestaurants()'>
+    <nav>
+        <a style = 'margin-right : auto;text-decoration : none;'href = '/'><h1 style = 'font-family : "Candara";color : white;margin : 20px; font-size: 35px;'>ComRate</h1></a>
+        <ul>
+            <li><a href = '/'>Home</a></li>
+            <li><a href = '/aboutus'>About us</a></li>
+            <li><a href = '/contactus'>Contact us</a></li>
+        </ul>
+        <button id = 'sign-login-btn' onclick = 'sign_login()'>Sign up/Login</button>
+    </nav>
+    
+    <div class = 'img_search'>
+        <div class = 'search'>
+            <input id = 'search-box' type = 'text' placeholder="Search for restuarants"/>
+       </div>
+       <div id = 'search-result'></div>
+    </div>
+
+    <div class = 'allResWrapper'>
+        <h2 style = 'color : white'>All Restuarants</h2>
+        <hr>
+        <div id = 'allRes' class = 'allRes'>
+               
+        </div>
+    </div>
+</body>
+
+</html>

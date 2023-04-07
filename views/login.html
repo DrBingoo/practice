@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = 'stylesheet' href = '/css/signup_loginStyles.css'>
+    <title>Login</title>
+</head>
+<body style = 'background-color : #333333;'>
+    <a style = 'margin-top : 10px;text-align: center;text-decoration : none;'href = '/'><h1 style = 'font-family : "Candara";color : white; font-size: 35px;'>ComRate</h1></a>
+    <div class = 'button-box'>
+        <div id = 'login_selected'></div>
+        <a href = '/user/signup'><button>Sign up</button></a>
+        <a href = '/user/login'><button>Login</button></a>
+    </div>
+    
+    <form class = 'box'>
+        <input type = 'text' id = 'username' name = 'username' placeholder="Username" required>
+        <input type = 'password' id = 'password' name = 'password' placeholder="Password" required>
+        <button style = 'margin-top: 10px;' type = 'submit'>Login</button>
+        <div style = 'text-align:center;margin-top:5px;color:red' id = 'error'></div>
+    </form>
+    <script src = '/js/login.js'></script>
+</body>
+</html>

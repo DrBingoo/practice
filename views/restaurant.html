@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = 'stylesheet' href = '/css/restaurant.css'>
+    <title>Details of restaurant</title>
+    <script src="https://kit.fontawesome.com/6645d46044.js" crossorigin="anonymous"></script>
+    <script src = '/js/restaurant.js' defer></script>
+    <script src = '/js/restaurant_UD_req.js' defer></script>
+</head>
+<body onload = 'getOverview()' style = 'background-color : #333333;'>
+    <a style = 'margin-right : auto;text-decoration : none;'href = '/'><h1 style = 'font-family : "Candara";color : white;margin : 20px; font-size: 35px;'>ComRate</h1></a>
+    <div id = 'poster'class = 'poster'></div>
+
+    <div class = 'restaurant'>
+        <div class = 'tab'>
+            <button id = 'btn-overview' class = 'tablink active' onclick='openTab(this,"overview")'>Overview</button>
+            <button id = 'btn-reviews' class = 'tablink' onclick='openTab(this,"reviews"); getReviews()'>Reviews</button>
+            <button id = 'btn-photos' class = 'tablink' onclick='openTab(this,"photos"); getPhotos()'>Photos</button>
+        </div>
+        <h1 style = 'margin-bottom: 5px;' id = 'name'>Name</h1>
+        <hr>
+
+        <div style = 'display :block' id = 'overview' class = 'overview res'>
+
+        </div>
+
+        <div style = 'display: none' id = 'reviews' class = 'res'>
+            
+            <div id = 'innerContainer' class = reviews>
+                
+            </div>
+        </div>
+
+        <div style = 'display: none' id = 'photos' class = 'photos res'>
+            
+        </div>
+    </div>
+
+    <div id = 'write-modal' class = 'modal'>
+        <div class = 'modal-header'>
+            <h2 style = 'font-size: 20px'>Write a review</h2>
+            <button onclick = 'closeModal()' class = 'close-btn'>&times;</button>
+        </div>
+        <div class = 'rating'>
+            <i class="fas fa-star" data-rate = '1' onclick="rate(this)"></i>
+            <i class="fas fa-star" data-rate = '2' onclick="rate(this)"></i>
+            <i class="fas fa-star" data-rate = '3' onclick="rate(this)"></i>
+            <i class="fas fa-star" data-rate = '4' onclick="rate(this)"></i>
+            <i class="fas fa-star" data-rate = '5' onclick="rate(this)"></i>
+        </div>
+        <form id = 'write'>
+            <textarea name = 'comment' cols = '60' rows = '10'placeholder = 'Please type your comment here' required></textarea>
+            <button type = submit>Submit</button>
+        </form>
+    </div>
+
+    <div id = 'update-modal' class = 'modal'>
+        <div class = 'modal-header'>
+            <h2 style = 'font-size: 20px'>Edit a review</h2>
+            <button onclick = 'closeUpdateModal()' class = 'close-btn'>&times;</button>
+        </div>
+        <div class = 'updateRating'>
+            <i class="fas fa-star" data-rate = '1' onclick="updateRate(this)"></i>
+            <i class="fas fa-star" data-rate = '2' onclick="updateRate(this)"></i>
+            <i class="fas fa-star" data-rate = '3' onclick="updateRate(this)"></i>
+            <i class="fas fa-star" data-rate = '4' onclick="updateRate(this)"></i>
+            <i class="fas fa-star" data-rate = '5' onclick="updateRate(this)"></i>
+        </div>
+        <form id = 'update'>
+            <textarea name = 'updateComment' cols = '60' rows = '10'placeholder = 'Please type your updated comment here' required></textarea>
+            <button type = submit>Submit</button>
+        </form>
+    </div>
+    <div class = 'overlay'></div>
+</body>
+
+</html>
